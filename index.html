@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Testimonials</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  
+    <style>
+      .mbot {
+        margin-bottom: 60px;
+      }
+      .mtop {
+        margin-top: -70px;
+      }
+      .custom-bg {
+        background: linear-gradient(
+          155deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(3, 2, 56, 1) 0%,
+          rgba(4, 3, 63, 1) 0%,
+          rgba(37, 9, 121, 1) 50%,
+          rgba(0, 212, 255, 1) 50%,
+          rgba(160, 165, 197, 1) 50%
+        );
+      }
+    </style>
+  </head>
+
+  <body class="custom-bg min-h-screen flex items-center justify-center">
+    <div id="assignment" class="flex flex-col space-y-6 p-6">
+
+      <!-- Heading -->
+      <div class="text-white text-left ml-6 font-bold text-3xl mb-12">
+        OUR SERVICES
+      </div>
+
+      <div class="flex justify-between space-x-6">
+        <!-- box 1 -->
+        <div id="box1" class="service-box bg-white p-6 text-center shadow-md space-y-4">
+          <div class="flex justify-center">
+            <img
+              src="https://cdn.rotorootercdn.com/images/images/home/emergencyservice.svg"
+              alt="emergencyservice"
+              class="h-24 w-24 mtop object-contain bg-white rounded-full border-4 border-indigo-950 shadow-md"
+            />
+          </div>
+          <div class="text">
+            <h1 class="text-lg font-bold text-black-600">
+              Emergency Plumbing Services
+            </h1>
+            <p class="text-gray-600">
+              Our plumbers are ready to go 24/7 for emergencies - including
+              nights, weekends and holidays
+            </p>
+            <h5 class="text-violet-800 font-semibold">
+              EXPLORE THIS SERVICE >
+            </h5>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div id="box2" class="service-box bg-white p-6 text-center shadow-md space-y-4">
+          <div class="flex justify-center">
+            <img
+              src="https://cdn.rotorootercdn.com/images/images/home/plumbingdrain.svg"
+              alt="pipe"
+              class="h-24 w-24 mtop object-contain bg-white rounded-full border-4 border-indigo-950 shadow-md"
+            />
+          </div>
+          <div class="text">
+            <h1 class="text-lg font-bold text-black-600">
+              Plumbing and Drains
+            </h1>
+            <p class="text-gray-600">
+              As the largest plumbing and drain service company, we make
+              thousands of repairs every day.
+            </p>
+            <h5 class="text-violet-800 font-semibold">
+              EXPLORE THIS SERVICE >
+            </h5>
+          </div>
+        </div>
+
+        <!-- box 3 -->
+        <div id="box3" class="service-box bg-white p-6 text-center shadow-md space-y-4">
+          <div class="flex justify-center">
+            <img
+              src="https://cdn.rotorootercdn.com/images/images/home/waterdamage.svg"
+              alt="waterdamage"
+              class="h-24 w-24 mtop object-contain bg-white rounded-full border-4 border-indigo-950 shadow-md"
+            />
+          </div>
+          <div class="text">
+            <h1 class="text-lg font-bold text-black-600">Water Damage</h1>
+            <p class="text-gray-600">
+              Our teams are equipped with state-of-the-art water extraction and
+              cleanup equipment.
+            </p>
+            <h5 class="text-violet-800 font-semibold">
+              EXPLORE THIS SERVICE >
+            </h5>
+          </div>
+        </div>
+
+        <!-- box 4 -->
+        <div id="box4" class="service-box bg-white p-6 text-center shadow-md space-y-4" >
+          <div class="flex justify-center">
+            <img
+              src="https://cdn.rotorootercdn.com/images/images/home/waterheaters.svg"
+              alt="waterheaters"
+              class="h-24 w-24 mtop object-contain bg-white rounded-full border-4 border-indigo-950 shadow-md"
+            />
+          </div>
+          <div class="text">
+            <h1 class="text-lg font-bold text-black-600">Water Heaters</h1>
+            <p class="text-gray-600">
+              Trust Roto-Rooter for repair and replacement of gas, electric and
+              tankless water heaters.
+            </p>
+            <h5 class="text-violet-800 mbot font-semibold">
+              EXPLORE THIS SERVICE >
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- js here -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <script>
+      function addHoverAnimation(boxId) {
+        const box = document.getElementById(boxId);
+        box.addEventListener("mouseenter", () => {
+          anime({
+            targets: `#${boxId}`,
+            rotate: ["0turn", "2turn"],
+            duration: 1000,
+            easing: "easeInOutQuad",
+          });
+        });
+      }
+
+      
+      addHoverAnimation("box1");
+      addHoverAnimation("box2");
+      addHoverAnimation("box3");
+      addHoverAnimation("box4");
+    </script>
+    
+  </body>
+</html>
