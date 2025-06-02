@@ -1,7 +1,21 @@
-import React from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>React with Babel CDN</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
 
-function Hello() {
-  return React.createElement("h1", null, "Hello, sir!");
-}
+  <script type="text/babel">
+    function Hello() {
+      return <h1>Hello, sir!</h1>;
+    }
 
-export default Hello;
+    ReactDOM.createRoot(document.getElementById('root')).render(<Hello />);
+  </script>
+</body>
+</html>
